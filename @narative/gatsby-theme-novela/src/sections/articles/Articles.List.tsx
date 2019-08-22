@@ -39,7 +39,7 @@ function ArticlesList({ articles, alwaysShowAllDetails }: ArticlesListProps) {
   if (!articles) return null;
 
   const hasOnlyOneArticle = articles.length === 1;
-  const { gridLayout = "tiles", hasSetGridLayout, getGridLayout } = useContext(
+  const { gridLayout = "rows", hasSetGridLayout, getGridLayout } = useContext(
     GridLayoutContext,
   );
 
@@ -97,7 +97,7 @@ const ListItem = ({ article, narrow }: ArticlesListItemProps) => {
     <ArticleLink to={article.slug} data-a11y="false">
       <Item gridLayout={gridLayout}>
         <ImageContainer narrow={narrow} gridLayout={gridLayout}>
-          {hasHeroImage ? <Image src={imageSource} /> : <ImagePlaceholder />}
+          {hasHeroImage ? <RoundedImage src={imageSource} /> : <ImagePlaceholder />}
         </ImageContainer>
         <div>
           <Title dark hasOverflow={hasOverflow} gridLayout={gridLayout}>
@@ -245,6 +245,7 @@ const Item = styled.div<{ gridLayout: string }>`
 `;
 
 const ImageContainer = styled.div<{ narrow: boolean; gridLayout: string }>`
+  border-radius: 10px;
   position: relative;
   height: ${p => (p.gridLayout === "tiles" ? "280px" : "220px")};
   box-shadow: 0 30px 60px -10px rgba(0, 0, 0, ${p => (p.narrow ? 0.22 : 0.3)}),
@@ -269,6 +270,10 @@ const ImageContainer = styled.div<{ narrow: boolean; gridLayout: string }>`
     border-top-right-radius: 5px;
     border-top-left-radius: 5px;
   `}
+`;
+
+const RoundedImage = styled(Image)`
+  border-radius: 10px;
 `;
 
 const Title = styled(Headings.h2)`
