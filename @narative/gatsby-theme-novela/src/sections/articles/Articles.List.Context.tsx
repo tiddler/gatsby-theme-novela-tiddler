@@ -5,14 +5,14 @@ interface GridLayoutProviderProps {
 }
 
 export const GridLayoutContext = createContext({
-  gridLayout: "tiles",
+  gridLayout: "rows",
   hasSetGridLayout: false,
   setGridLayout: (tile: string) => {},
   getGridLayout: () => {},
 });
 
 function GridLayoutProvider({ children }: GridLayoutProviderProps) {
-  const initialLayout = "tiles";
+  const initialLayout = "rows";
 
   const [gridLayout, setGridLayout] = useState<string>(initialLayout);
   const [hasSetGridLayout, setHasSetGridLayout] = useState<boolean>(false);
