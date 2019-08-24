@@ -200,7 +200,6 @@ const MetaData = styled.div`
   font-weight: 600;
   font-size: 16px;
   color: ${p => p.theme.colors.grey};
-  opacity: 0.33;
 
   ${mediaqueries.phablet`
     max-width: 100%;
