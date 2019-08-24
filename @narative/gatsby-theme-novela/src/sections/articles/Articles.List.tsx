@@ -202,8 +202,7 @@ const listItemRow = p => css`
 
   ${mediaqueries.phablet`
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 10px;
   `}
 `;
 
@@ -221,8 +220,7 @@ const listItemTile = p => css`
   ${mediaqueries.phablet`
     margin-bottom: 40px;
     box-shadow: 0px 20px 40px rgba(0, 0, 0, 0.2);
-    border-bottom-right-radius: 5px;
-    border-bottom-left-radius: 5px;
+    border-radius: 10px;
   `}
 `;
 
@@ -265,13 +263,18 @@ const ImageContainer = styled.div<{ narrow: boolean; gridLayout: string }>`
     overflow: hidden;
     margin-bottom: 0;
     box-shadow: none;
-    border-top-right-radius: 5px;
-    border-top-left-radius: 5px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
   `}
 `;
 
 const RoundedImage = styled(Image)`
   border-radius: 10px;
+
+  ${mediaqueries.phablet`
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+  `}
 `;
 
 const Title = styled(Headings.h2)`
