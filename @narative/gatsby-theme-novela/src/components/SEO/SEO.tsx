@@ -128,8 +128,8 @@ function SEO({
       meta={metaTags}
     >
       <link
-        href="https://fonts.googleapis.com/css?family=Merriweather:700,700i&display=swap"
-        rel="stylesheet"
+       href="https://fonts.googleapis.com/css?family=Nunito&display=swap"
+       rel="stylesheet"
       />
       {children}
     </Helmet>
