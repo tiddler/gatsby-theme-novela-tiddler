@@ -64,7 +64,8 @@ const UnorderedList = styled.ul`
     top: 8px;
     height: 8px;
     width: 8px;
-    background: ${p => p.theme.colors.articleText};
+    border-radius: 50%;
+    background: #3F51B5;
 
     ${mediaqueries.tablet`
       left: 0;
