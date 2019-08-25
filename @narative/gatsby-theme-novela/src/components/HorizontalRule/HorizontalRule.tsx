@@ -17,7 +17,7 @@ const HorizontalRule = styled.hr`
   background-position: center;
 
   ${mediaqueries.desktop`
-    max-width: 507px;
+    max-width: 760px;
   `}
 
   ${mediaqueries.tablet`

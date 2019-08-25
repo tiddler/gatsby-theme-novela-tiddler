@@ -12,6 +12,7 @@ import Blockquote from "@components/Blockquote";
 import Code from "@components/Code";
 import Headings from "@components/Headings";
 import HorizontalRule from "@components/HorizontalRule";
+import InlineCode from "@components/InlineCode";
 import Lists from "@components/Lists";
 import Paragraph from "@components/Paragraph";
 import { ImageZoom } from "@components/Image";
@@ -34,6 +35,7 @@ const components = {
   ol: Lists.ol,
   p: Paragraph,
   code: Code.Prism,
+  inlineCode: InlineCode,
   pre: Code.Pre,
 };
 
