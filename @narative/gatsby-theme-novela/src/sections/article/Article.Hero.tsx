@@ -45,31 +45,6 @@ const ArticleHero = ({ article, authors }: ArticleHeroProps) => {
 export default ArticleHero;
 
 const Hero = styled.div`
-  ${p => mediaqueries.phablet`
-    &::before {
-      content: "";
-      width: 100vw;
-      height: 20px;
-      background: ${p.theme.colors.primary};
-      position: absolute;
-      left: 0;
-      top: 0;
-      transition: ${p.theme.colorModeTransition};
-    }
-
-    &::after {
-      content: "";
-      width: 100vw;
-      height: 10px;
-      background: ${p.theme.colors.background};
-      position: absolute;
-      left: 0;
-      top: 10px;
-      border-top-left-radius: 25px;
-      border-top-right-radius: 25px;
-      transition: ${p.theme.colorModeTransition};
-    }
-  `}
 `;
 
 const ArticleMeta = styled.div<{ hasCoAUthors: boolean }>`

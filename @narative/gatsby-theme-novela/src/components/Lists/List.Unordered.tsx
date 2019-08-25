@@ -12,10 +12,10 @@ const UnorderedList = styled.ul`
   font-size: 18px;
 
   width: 100%;
-  max-width: 680px;
+  max-width: 600px;
 
   ${mediaqueries.desktop`
-    max-width: 507px;
+    max-width: 600px;
   `}
 
   ${mediaqueries.tablet`

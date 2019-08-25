@@ -67,7 +67,7 @@ const ARTICLE_WIDTH = css`
   max-width: 680px;
 
   ${mediaqueries.desktop`
-    max-width: 507px;
+    max-width: 680px;
   `}
 
   ${mediaqueries.tablet`
@@ -234,7 +234,7 @@ const ImageCSS = css`
     `};
 
     ${mediaqueries.desktop`
-      max-width: 507px;
+      max-width: 680px;
     `}
 
     ${mediaqueries.tablet`
