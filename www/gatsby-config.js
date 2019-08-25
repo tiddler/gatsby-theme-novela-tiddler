@@ -1,32 +1,23 @@
 require("dotenv").config();
 
 const siteMetadata = {
-  title: `Novela by Narative`,
-  name: `Narative`,
-  siteUrl: `https://novela.narative.co`,
+  title: `FishPond by tiddler`,
+  name: `FishPond`,
+  siteUrl: `https://tiddler.netlify.com`,
   description: `This is my description that will be used in the meta tags and important for search results`,
   hero: {
-    heading: `Welcome to Novela, the simplest way to start publishing with Gatsby.`,
+    heading: `Welcome to FishPond, a little place of my ideas and thoughts.`,
     maxWidth: 652,
   },
   social: [
     {
-      url: `https://twitter.com/narative`,
+      url: `https://twitter.com/RuifanYu`,
     },
     {
-      url: `https://github.com/narative`,
+      url: `https://github.com/tiddler`,
     },
     {
-      url: `https://instagram.com/narative.co`,
-    },
-    {
-      url: `https://www.linkedin.com/company/narative/`,
-    },
-    {
-      url: `https://dribbble.com/narativestudio`,
-    },
-    {
-      url: `https://youtube.com`,
+      url: `https://www.linkedin.com/in/ruifan-yu/`,
     },
   ],
 };
@@ -61,14 +52,7 @@ const plugins = [
   {
     resolve: `gatsby-plugin-google-analytics`,
     options: {
-      trackingId: "UA-118232427-3",
-    },
-  },
-  {
-    resolve: "gatsby-plugin-mailchimp",
-    options: {
-      endpoint:
-        "https://narative.us19.list-manage.com/subscribe/post?u=65ef169332a03669b9538f6ef&amp;id=c55c426282",
+      trackingId: "UA-115676663-1",
     },
   },
 ];
