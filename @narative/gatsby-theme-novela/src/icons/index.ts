@@ -6,7 +6,10 @@ import Twitter from "./social/Twitter.Icon";
 import LinkedIn from "./social/LinkedIn.Icon";
 import Medium from "./social/Medium.Icon";
 import Github from "./social/Github.Icon";
+import Unsplash from "./social/Unsplash.Icon";
 import YouTube from "./social/YouTube.Icon";
+import Patreon from "./social/Patreon.Icon";
+import Paypal from "./social/Paypal.Icon";
 
 // UI
 import ChevronLeft from "./ui/ChevronLeft.Icon";
@@ -27,7 +30,10 @@ export default {
   LinkedIn,
   Medium,
   Github,
+  Unsplash,
   YouTube,
+  Patreon,
+  Paypal,
 
   ChevronLeft,
   Copied,
