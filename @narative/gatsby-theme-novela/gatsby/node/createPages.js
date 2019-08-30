@@ -29,6 +29,8 @@ function buildPaginatedPath(index, basePath) {
 function slugify(str, base) {
   const slug = str
     .toLowerCase()
+    .normalize("NFD")
+    .replace(/[\u0300-\u036f]/g, "")
     .replace(/[^a-z0-9]+/g, "-")
     .replace(/(^-|-$)+/g, "");
 
@@ -185,7 +187,7 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
      * We need a way to find the next artiles to suggest at the bottom of the articles page.
      * To accomplish this there is some special logic surrounding what to show next.
      */
-    let next = articles.slice(index + 1, index + 3);
+    let next = articles.filter(article => !article.secret).slice(index + 1, index + 3);
     // If it's the last item in the list, there will be no articles. So grab the first 2
     if (next.length === 0) next = articles.slice(0, 2);
     // If there's 1 item in the list, grab the first article
@@ -222,11 +224,11 @@ module.exports = async ({ actions: { createPage }, graphql }, themeOptions) => {
           article.author.toLowerCase().includes(author.name.toLowerCase()),
         )
         .filter(article => !article.secret);
-      const path = slugify(author.name, authorsPath);
+      const path = slugify(author.slug, authorsPath);
 
       createPaginatedPages({
         edges: articlesTheAuthorHasWritten,
-        pathPrefix: path,
+        pathPrefix: author.slug,
         createPage,
         pageLength,
         pageTemplate: templates.author,

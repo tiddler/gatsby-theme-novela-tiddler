@@ -10,7 +10,7 @@ const breakpoints = [
   ["tablet", 735],
   ["desktop", 1070],
   ["desktop_medium", 1280],
-  ["desktop_large", 1440],
+  ["desktop_large", 1440]
 ];
 
 const fonts = {
@@ -29,5 +29,5 @@ export default merge({
   colors,
   fonts,
   breakpoints,
-  tags,
+  tags
 });
