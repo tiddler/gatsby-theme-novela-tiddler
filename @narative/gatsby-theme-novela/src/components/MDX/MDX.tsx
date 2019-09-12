@@ -64,7 +64,7 @@ export default MDX;
 const IMAGE_WIDTHS = {
   regular: "680px",
   large: "1004px",
-  full: "100%"
+  full: "100vw"
 };
 
 const ARTICLE_WIDTH = css`
@@ -289,7 +289,6 @@ const ImageCSS = css`
     position: relative;
     left: -68px;
     width: ${IMAGE_WIDTHS.full};
-    max-width: ${IMAGE_WIDTHS.full};
     margin: 25px auto 60px;
     pointer-events: none;
 
